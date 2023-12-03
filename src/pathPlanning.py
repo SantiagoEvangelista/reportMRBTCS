@@ -60,7 +60,7 @@ def buildGraph(cv2Polygons,position,goal):
     # Find the shortest path
     startPoint = vg.Point(position[0], position[1])
     endPoint = vg.Point(goal[0], goal[1])
-    shortestPath = graph.shortestPath(startPoint, endPoint)
+    shortestPath = graph.shortest_path(startPoint, endPoint)
 
     shortestPath = np.array([[point.x, point.y] for point in shortestPath])
     #check if distance between points is too small and remove unnecessary points
