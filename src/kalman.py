@@ -19,8 +19,6 @@ def inverseSpeedConversion(vR, vL, R, L, Cr, Cl):
 
 R = 20 #mm
 L = 105 #mm
-var_vr = 0.1 #da cambiare
-var_vl = 0.1 #da cambiare
 Cl = 69.33821285
 Cr = 70.74580573
  
@@ -37,9 +35,9 @@ def getB(yaw, deltak):
 process_noise_w_k_minus_1 = np.array([0,0,0])
      
 # State model noise covariance matrix Q_k
-q11 = 3.2 #da cambiare
-q22 = 3.2 #da cambiare
-qtheta = 0.048 #da cambiare
+q11 = 2 
+q22 = 2 
+qtheta = 0.07                   
 Q_k = np.array([[q11, 0, 0],
                 [0, q22, 0],
                 [0, 0, qtheta]])                 
@@ -47,9 +45,9 @@ Q_k = np.array([[q11, 0, 0],
 H_k = np.array([[1.0,0,0],[0,1.0,0],[0,0,1.0]])
                       
 # Sensor measurement noise covariance matrix R_k
-r11 = 1.1 #da cambiare
-r22 = 1.1 #da cambiare
-r33 = 0.001 #da cambiare
+r11 = 0.7 
+r22 = 0.7 
+r33 = 0.0014 
 R_k = np.array([[r11,0,0],[0,r22,0],[0,0,r33]])
 
 # Sensor measurement noise covariance matrix R_k_nc
