@@ -12,8 +12,8 @@ IMAGE_HEIGHT = 1080
 
 
 def inverseSpeedConversion(vR, vL, R, L, Cr, Cl):
-    v = (R/2)*(vR/Cl + vL/Cr)
-    omega = (R/L)*(vR/Cl - vL/Cr)
+    v = (R/2)*(vR/Cr + vL/Cl)
+    omega = (R/L)*(vR/Cr - vL/Cl)
     return v, omega
 
 
