@@ -141,7 +141,6 @@ def estimatePosition(frame,previousControlVector,dt,P_k_minus_1,estimatedState_1
     v,w = inverseSpeedConversion(measRS,measLS,R,L,Cr,Cl)
 
     z_k_observation_vector = np.array([globPosition[0],IMAGE_HEIGHT-globPosition[1],globAngle,v,w])
-    print(z_k_observation_vector)
 
     if globPosition[0] == -1:
         try:    
